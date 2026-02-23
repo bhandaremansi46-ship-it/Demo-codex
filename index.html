@@ -1,0 +1,367 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top AI Tools for Coding</title>
+  <style>
+    :root {
+      --bg: #f4f1ea;
+      --card: #ffffff;
+      --ink: #1d1f1f;
+      --muted: #5c6466;
+      --accent: #0e5a6f;
+      --accent-2: #c54b2c;
+      --line: #dcd4c7;
+      --shadow: 0 18px 40px rgba(29, 31, 31, 0.12);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Space Grotesk", "Segoe UI", Tahoma, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(14, 90, 111, 0.15), transparent 40%),
+        radial-gradient(circle at 20% 80%, rgba(197, 75, 44, 0.12), transparent 45%),
+        var(--bg);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 40px 6vw 48px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      margin: 0 auto;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 6vw 72px;
+      display: grid;
+      gap: 28px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    @media (min-width: 860px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px 26px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    section::after {
+      content: "";
+      position: absolute;
+      inset: auto -40% -40% auto;
+      width: 180px;
+      height: 180px;
+      background: rgba(14, 90, 111, 0.08);
+      border-radius: 50%;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.45rem;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+      color: var(--accent);
+    }
+
+    p {
+      margin: 0 0 10px;
+      color: var(--muted);
+    }
+
+    ul, ol {
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    li { margin-bottom: 8px; }
+
+    .wide {
+      grid-column: 1 / -1;
+    }
+
+    .split {
+      display: grid;
+      gap: 20px;
+    }
+
+    @media (min-width: 860px) {
+      .split {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(197, 75, 44, 0.12);
+      color: var(--accent-2);
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+    }
+
+    .note {
+      border-left: 4px solid var(--accent-2);
+      padding-left: 12px;
+      color: var(--muted);
+      margin-top: 16px;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(244, 241, 234, 0.92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 12px 6vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 0.98rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    th {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">AI Coding Stack</div>
+      <div class="nav-links">
+        <a href="#tools">Tools</a>
+        <a href="#access">Access</a>
+        <a href="#compare">Compare</a>
+        <a href="#github">GitHub</a>
+        <a href="#workflow">Workflow</a>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <h1>Top AI Tools for Coding</h1>
+    <p>
+      A quick guide to the most popular AI copilots for developers, with clear steps for using
+      them inside VS Code, the Windows Command Prompt, and your GitHub workflow.
+    </p>
+  </header>
+
+  <main>
+    <div class="grid" id="tools">
+      <section>
+        <span class="tag">Autocompletion</span>
+        <h2>GitHub Copilot for Real-Time Suggestions</h2>
+        <p>AI-powered code suggestions and inline completions in your editor.</p>
+        <ul>
+          <li>Writes functions, tests, and repetitive code faster.</li>
+          <li>Understands context from open files and comments.</li>
+          <li>Best for day-to-day coding flow inside VS Code.</li>
+        </ul>
+      </section>
+
+      <section>
+        <span class="tag">Terminal</span>
+        <h2>OpenAI Codex CLI for Command-Line Workflows</h2>
+        <p>A command-line assistant that can run tasks, explain output, and edit files.</p>
+        <ul>
+          <li>Great for refactors, automation, and quick scripts.</li>
+          <li>Works directly from the terminal with your repo.</li>
+          <li>Ideal for focused, iterative edits.</li>
+        </ul>
+      </section>
+
+      <section>
+        <span class="tag">Chat</span>
+        <h2>ChatGPT for Planning &amp; Problem Solving</h2>
+        <p>Conversational help for design, debugging, documentation, and learning.</p>
+        <ul>
+          <li>Explain concepts, review code, or brainstorm features.</li>
+          <li>Generate docs, onboarding guides, or release notes.</li>
+          <li>Useful companion alongside IDE workflows.</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="wide" id="access">
+      <h2>Access These Tools Inside VS Code</h2>
+      <div class="split">
+        <div>
+          <h3>Enable GitHub Copilot</h3>
+          <ol>
+            <li>Open VS Code and go to Extensions.</li>
+            <li>Search for “GitHub Copilot” and install it.</li>
+            <li>Sign in with your GitHub account when prompted.</li>
+            <li>Start typing code; accept suggestions with Tab.</li>
+          </ol>
+        </div>
+        <div>
+          <h3>Use ChatGPT &amp; Codex CLI Together</h3>
+          <ol>
+            <li>Use the VS Code terminal (View → Terminal).</li>
+            <li>Run the Codex CLI command to ask for edits or explanations.</li>
+            <li>Use ChatGPT in a browser for deeper discussions or planning.</li>
+            <li>Copy insights back into your codebase as needed.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="wide">
+      <h2>Access These Tools From CMD (Command Prompt)</h2>
+      <ol>
+        <li>Open Command Prompt in your project folder.</li>
+        <li>Run the Codex CLI to request changes or assistance.</li>
+        <li>Use Git commands directly to manage branches and commits.</li>
+        <li>Open ChatGPT in a browser for additional context when needed.</li>
+      </ol>
+      <p class="note">Tip: Keep your terminal open alongside VS Code to streamline AI + Git workflows.</p>
+    </section>
+
+    <section class="wide" id="compare">
+      <h2>Tool Comparison at a Glance</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Tool</th>
+              <th>Best For</th>
+              <th>Where It Runs</th>
+              <th>Strength</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GitHub Copilot</td>
+              <td>Inline code completion and suggestions</td>
+              <td>VS Code editor</td>
+              <td>Fast iteration while coding</td>
+            </tr>
+            <tr>
+              <td>OpenAI Codex CLI</td>
+              <td>Repo-wide edits and automation</td>
+              <td>Terminal (CMD / VS Code)</td>
+              <td>Task execution and refactoring</td>
+            </tr>
+            <tr>
+              <td>ChatGPT</td>
+              <td>Planning, debugging, documentation</td>
+              <td>Browser or app</td>
+              <td>Deep reasoning and explanation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="wide" id="github">
+      <h2>Connect to GitHub &amp; Push Your Code</h2>
+      <ol>
+        <li>Create a GitHub repository and copy its HTTPS URL.</li>
+        <li>In your project folder, run: <strong>git init</strong>.</li>
+        <li>Link the remote: <strong>git remote add origin &lt;repo-url&gt;</strong>.</li>
+        <li>Stage files: <strong>git add .</strong>.</li>
+        <li>Commit changes: <strong>git commit -m "Initial commit"</strong>.</li>
+        <li>Push to GitHub: <strong>git push -u origin main</strong>.</li>
+      </ol>
+      <p class="note">If your default branch is <strong>master</strong>, push with <strong>git push -u origin master</strong> instead.</p>
+    </section>
+
+    <section class="wide" id="workflow">
+      <h2>Complete Workflow Example</h2>
+      <ol>
+        <li>Use ChatGPT to outline the feature, edge cases, and acceptance criteria.</li>
+        <li>Open VS Code, enable Copilot, and implement the core flow.</li>
+        <li>Run Codex CLI to refactor, add tests, or update docs across the repo.</li>
+        <li>Verify locally, then commit and push to GitHub.</li>
+      </ol>
+      <p class="note">This sequence keeps strategy, implementation, and automation aligned without context switching.</p>
+    </section>
+  </main>
+</body>
+</html>
