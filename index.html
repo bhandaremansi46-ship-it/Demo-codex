@@ -1,19 +1,21 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Top AI Tools for Coding</title>
+  <title>DashDish - Food Delivery</title>
   <style>
     :root {
-      --bg: #f4f1ea;
-      --card: #ffffff;
-      --ink: #1d1f1f;
-      --muted: #5c6466;
-      --accent: #0e5a6f;
-      --accent-2: #c54b2c;
-      --line: #dcd4c7;
-      --shadow: 0 18px 40px rgba(29, 31, 31, 0.12);
+      --bg-cream: #faf3e8;
+      --bg-warm: #ffd6a8;
+      --orange: #ef6a2e;
+      --orange-dark: #cf4d14;
+      --green: #1f6f4a;
+      --ink: #1a1a1a;
+      --muted: #5a5a5a;
+      --card: #fff8ef;
+      --line: #ebc89f;
+      --shadow: 0 14px 28px rgba(26, 26, 26, 0.12);
       --radius: 18px;
     }
 
@@ -21,347 +23,325 @@
 
     body {
       margin: 0;
-      font-family: "Space Grotesk", "Segoe UI", Tahoma, sans-serif;
+      font-family: "Trebuchet MS", "Gill Sans", "Segoe UI", sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(circle at top left, rgba(14, 90, 111, 0.15), transparent 40%),
-        radial-gradient(circle at 20% 80%, rgba(197, 75, 44, 0.12), transparent 45%),
-        var(--bg);
-      line-height: 1.6;
+        radial-gradient(circle at 15% 15%, rgba(239, 106, 46, 0.22), transparent 35%),
+        radial-gradient(circle at 85% 25%, rgba(31, 111, 74, 0.18), transparent 32%),
+        linear-gradient(160deg, var(--bg-cream), #fff5e8 58%, #ffedd5 100%);
+      min-height: 100vh;
+      line-height: 1.5;
     }
 
-    header {
-      padding: 40px 6vw 48px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0 0 12px;
-      font-size: clamp(2.4rem, 4vw, 3.4rem);
-      letter-spacing: -0.02em;
-    }
-
-    header p {
+    .wrapper {
+      width: min(1120px, 92vw);
       margin: 0 auto;
-      max-width: 720px;
-      color: var(--muted);
-      font-size: clamp(1rem, 1.8vw, 1.2rem);
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 6vw 72px;
-      display: grid;
-      gap: 28px;
-    }
-
-    .grid {
-      display: grid;
-      gap: 24px;
-    }
-
-    @media (min-width: 860px) {
-      .grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    section {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 24px 26px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    section::after {
-      content: "";
-      position: absolute;
-      inset: auto -40% -40% auto;
-      width: 180px;
-      height: 180px;
-      background: rgba(14, 90, 111, 0.08);
-      border-radius: 50%;
-    }
-
-    h2 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      font-size: 1.45rem;
-    }
-
-    h3 {
-      margin: 0 0 10px;
-      font-size: 1.1rem;
-      color: var(--accent);
-    }
-
-    p {
-      margin: 0 0 10px;
-      color: var(--muted);
-    }
-
-    ul, ol {
-      margin: 12px 0 0;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-
-    li { margin-bottom: 8px; }
-
-    .wide {
-      grid-column: 1 / -1;
-    }
-
-    .split {
-      display: grid;
-      gap: 20px;
-    }
-
-    @media (min-width: 860px) {
-      .split {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(197, 75, 44, 0.12);
-      color: var(--accent-2);
-      font-weight: 600;
-      font-size: 0.8rem;
-      margin-bottom: 10px;
-    }
-
-    .note {
-      border-left: 4px solid var(--accent-2);
-      padding-left: 12px;
-      color: var(--muted);
-      margin-top: 16px;
     }
 
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(244, 241, 234, 0.92);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(8px);
-    }
-
-    .nav-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 12px 6vw;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
+      padding: 24px 0;
+      gap: 12px;
     }
 
     .brand {
-      font-weight: 700;
-      letter-spacing: 0.02em;
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: 0.6px;
     }
+
+    .brand span { color: var(--orange); }
 
     .nav-links {
       display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
+      gap: 14px;
       font-weight: 600;
     }
 
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 12px;
-      font-size: 0.98rem;
-    }
-
-    th, td {
-      text-align: left;
-      padding: 12px 10px;
-      border-bottom: 1px solid var(--line);
-      color: var(--muted);
-    }
-
-    th {
+    .nav-links a {
       color: var(--ink);
+      text-decoration: none;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      padding: 16px 0 44px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 4.7vw, 3.3rem);
+      line-height: 1.08;
+    }
+
+    .hero p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      max-width: 54ch;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 11px 20px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: linear-gradient(120deg, var(--orange), var(--orange-dark));
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--green);
+      color: var(--green);
+    }
+
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      transform: rotate(-1deg);
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      border-radius: 14px;
+      display: block;
+    }
+
+    .hero-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 12px;
       font-weight: 700;
     }
 
-    .table-wrap {
-      overflow-x: auto;
+    section {
+      margin-bottom: 34px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.55rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 152px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 13px;
+    }
+
+    .title-row {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .muted { color: var(--muted); }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .step {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .step-num {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--green);
+      color: #fff;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      padding: 16px 0 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .cards,
+      .steps {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cards,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card img {
+        height: 220px;
+      }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <div class="nav-inner">
-      <div class="brand">AI Coding Stack</div>
+  <div class="wrapper">
+    <nav>
+      <div class="brand">Dash<span>Dish</span></div>
       <div class="nav-links">
-        <a href="#tools">Tools</a>
-        <a href="#access">Access</a>
-        <a href="#compare">Compare</a>
-        <a href="#github">GitHub</a>
-        <a href="#workflow">Workflow</a>
+        <a href="#menu">Menu</a>
+        <a href="#how">How it works</a>
+        <a href="#contact">Contact</a>
       </div>
-    </div>
-  </nav>
-  <header>
-    <h1>Top AI Tools for Coding</h1>
-    <p>
-      A quick guide to the most popular AI copilots for developers, with clear steps for using
-      them inside VS Code, the Windows Command Prompt, and your GitHub workflow.
-    </p>
-  </header>
+    </nav>
 
-  <main>
-    <div class="grid" id="tools">
-      <section>
-        <span class="tag">Autocompletion</span>
-        <h2>GitHub Copilot for Real-Time Suggestions</h2>
-        <p>AI-powered code suggestions and inline completions in your editor.</p>
-        <ul>
-          <li>Writes functions, tests, and repetitive code faster.</li>
-          <li>Understands context from open files and comments.</li>
-          <li>Best for day-to-day coding flow inside VS Code.</li>
-        </ul>
-      </section>
-
-      <section>
-        <span class="tag">Terminal</span>
-        <h2>OpenAI Codex CLI for Command-Line Workflows</h2>
-        <p>A command-line assistant that can run tasks, explain output, and edit files.</p>
-        <ul>
-          <li>Great for refactors, automation, and quick scripts.</li>
-          <li>Works directly from the terminal with your repo.</li>
-          <li>Ideal for focused, iterative edits.</li>
-        </ul>
-      </section>
-
-      <section>
-        <span class="tag">Chat</span>
-        <h2>ChatGPT for Planning &amp; Problem Solving</h2>
-        <p>Conversational help for design, debugging, documentation, and learning.</p>
-        <ul>
-          <li>Explain concepts, review code, or brainstorm features.</li>
-          <li>Generate docs, onboarding guides, or release notes.</li>
-          <li>Useful companion alongside IDE workflows.</li>
-        </ul>
-      </section>
-    </div>
-
-    <section class="wide" id="access">
-      <h2>Access These Tools Inside VS Code</h2>
-      <div class="split">
-        <div>
-          <h3>Enable GitHub Copilot</h3>
-          <ol>
-            <li>Open VS Code and go to Extensions.</li>
-            <li>Search for “GitHub Copilot” and install it.</li>
-            <li>Sign in with your GitHub account when prompted.</li>
-            <li>Start typing code; accept suggestions with Tab.</li>
-          </ol>
-        </div>
-        <div>
-          <h3>Use ChatGPT &amp; Codex CLI Together</h3>
-          <ol>
-            <li>Use the VS Code terminal (View → Terminal).</li>
-            <li>Run the Codex CLI command to ask for edits or explanations.</li>
-            <li>Use ChatGPT in a browser for deeper discussions or planning.</li>
-            <li>Copy insights back into your codebase as needed.</li>
-          </ol>
+    <section class="hero">
+      <div>
+        <h1>Hot meals delivered to your door in 30 minutes</h1>
+        <p>
+          Pick from local favorites, healthy bowls, and comfort food. Fast delivery,
+          live order tracking, and zero stress.
+        </p>
+        <div class="cta-group">
+          <a class="btn btn-primary" href="#menu">Order Now</a>
+          <a class="btn btn-outline" href="#how">How It Works</a>
         </div>
       </div>
+      <article class="hero-card" aria-label="Featured meal">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80" alt="Colorful healthy food bowl" />
+        <div class="hero-meta">
+          <span>Featured Bowl</span>
+          <span>$12.99</span>
+        </div>
+      </article>
     </section>
 
-    <section class="wide">
-      <h2>Access These Tools From CMD (Command Prompt)</h2>
-      <ol>
-        <li>Open Command Prompt in your project folder.</li>
-        <li>Run the Codex CLI to request changes or assistance.</li>
-        <li>Use Git commands directly to manage branches and commits.</li>
-        <li>Open ChatGPT in a browser for additional context when needed.</li>
-      </ol>
-      <p class="note">Tip: Keep your terminal open alongside VS Code to streamline AI + Git workflows.</p>
-    </section>
-
-    <section class="wide" id="compare">
-      <h2>Tool Comparison at a Glance</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Tool</th>
-              <th>Best For</th>
-              <th>Where It Runs</th>
-              <th>Strength</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>GitHub Copilot</td>
-              <td>Inline code completion and suggestions</td>
-              <td>VS Code editor</td>
-              <td>Fast iteration while coding</td>
-            </tr>
-            <tr>
-              <td>OpenAI Codex CLI</td>
-              <td>Repo-wide edits and automation</td>
-              <td>Terminal (CMD / VS Code)</td>
-              <td>Task execution and refactoring</td>
-            </tr>
-            <tr>
-              <td>ChatGPT</td>
-              <td>Planning, debugging, documentation</td>
-              <td>Browser or app</td>
-              <td>Deep reasoning and explanation</td>
-            </tr>
-          </tbody>
-        </table>
+    <section id="menu">
+      <div class="section-head">
+        <h2>Popular Picks</h2>
+        <span class="muted">Freshly prepared daily</span>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=900&q=80" alt="Burger and fries" />
+          <div class="card-body">
+            <div class="title-row"><span>Classic Burger</span><span>$10.50</span></div>
+            <p class="muted">Juicy grilled patty, cheddar, lettuce, tomato, fries.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=80" alt="Pepperoni pizza" />
+          <div class="card-body">
+            <div class="title-row"><span>Fire Pizza</span><span>$14.00</span></div>
+            <p class="muted">Stone-baked crust with pepperoni, basil, and mozzarella.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1559847844-d721426d6edc?auto=format&fit=crop&w=900&q=80" alt="Sushi assortment" />
+          <div class="card-body">
+            <div class="title-row"><span>Sushi Combo</span><span>$16.25</span></div>
+            <p class="muted">Salmon rolls, tuna nigiri, and fresh house-made sauce.</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="wide" id="github">
-      <h2>Connect to GitHub &amp; Push Your Code</h2>
-      <ol>
-        <li>Create a GitHub repository and copy its HTTPS URL.</li>
-        <li>In your project folder, run: <strong>git init</strong>.</li>
-        <li>Link the remote: <strong>git remote add origin &lt;repo-url&gt;</strong>.</li>
-        <li>Stage files: <strong>git add .</strong>.</li>
-        <li>Commit changes: <strong>git commit -m "Initial commit"</strong>.</li>
-        <li>Push to GitHub: <strong>git push -u origin main</strong>.</li>
-      </ol>
-      <p class="note">If your default branch is <strong>master</strong>, push with <strong>git push -u origin master</strong> instead.</p>
+    <section id="how">
+      <div class="section-head">
+        <h2>How It Works</h2>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <div class="step-num">1</div>
+          <h3>Choose Your Meal</h3>
+          <p class="muted">Browse menu options and add your favorites to the cart.</p>
+        </article>
+        <article class="step">
+          <div class="step-num">2</div>
+          <h3>Track Live</h3>
+          <p class="muted">Get real-time updates from the kitchen to your doorstep.</p>
+        </article>
+        <article class="step">
+          <div class="step-num">3</div>
+          <h3>Enjoy Fast Delivery</h3>
+          <p class="muted">Receive your food hot and fresh in around 30 minutes.</p>
+        </article>
+      </div>
     </section>
 
-    <section class="wide" id="workflow">
-      <h2>Complete Workflow Example</h2>
-      <ol>
-        <li>Use ChatGPT to outline the feature, edge cases, and acceptance criteria.</li>
-        <li>Open VS Code, enable Copilot, and implement the core flow.</li>
-        <li>Run Codex CLI to refactor, add tests, or update docs across the repo.</li>
-        <li>Verify locally, then commit and push to GitHub.</li>
-      </ol>
-      <p class="note">This sequence keeps strategy, implementation, and automation aligned without context switching.</p>
+    <section id="contact">
+      <div class="section-head">
+        <h2>Need Help?</h2>
+      </div>
+      <p class="muted">Call us at (555) 123-9090 or email support@dashdish.com</p>
     </section>
-  </main>
+
+    <footer>
+      2026 DashDish. Fast food delivery for busy days.
+    </footer>
+  </div>
 </body>
 </html>
